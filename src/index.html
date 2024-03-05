@@ -3,7 +3,7 @@
     <div class="tests__frame">
         @@include('html/menu.html')
         <div class="test-container">
-            <div class="tests__test">
+            <div class="tests__text disabled">
                 <p>Выберете тест из списка</p>
             </div>
             <div class="tests__test-start">
@@ -14,11 +14,47 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consequatur itaque facilis aliquam sunt neque, blanditiis vel, voluptas deserunt fuga amet impedit sed magni laboriosam provident labore suscipit aspernatur? Ratione?</p>
                 </div>
                 <div class="btn-container">
-                    <div class="btn-red">
+                    <div class="btn-red start">
                         Начать
                     </div>
-                    <div class="btn-transparent">
+                    <div class="btn-transparent cancel">
                         Отмена
+                    </div>
+                </div>
+            </div>
+            <div class="tests__test active">
+                <div class="tests__test-head">
+                    <div class="btn-gray">
+                        Выход
+                    </div>
+                    <div class="tests__test-head-title">
+                        <p>Test's name</p>
+                    </div>
+                    <div class="tests__test-head-menu">
+                        <div class="btn-gray">
+                            Сбросить ответы
+                        </div>
+                        <div class="tests__test-head-menu-counter">
+                            2/5
+                        </div>
+                        <div class="tests__test-head-menu-timer">
+                            00:00:00
+                        </div>
+                    </div>
+                </div>
+                <div class="tests__test-questions">
+                    <div class="test-questions__title">
+                        <p>1.Вопрос </p>
+                    </div>
+                    <div class="test-questions__options">
+                        <div class="checkbox-container">
+                            <input id='check-1' type="radio">
+                            <label for="check-1">@@option</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-2' type="radio">
+                            <label  for="check-2">@@option</label>
+                        </div>
                     </div>
                 </div>
             </div>

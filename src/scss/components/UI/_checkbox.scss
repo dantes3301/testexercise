@@ -1,0 +1,17 @@
+.checkbox-container{
+    label{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: ' ';
+            width: 13px;
+            height: 13px;
+            border-radius: 50px;
+            border: 1px solid #afafaf;
+        }
+    }
+    input:checked + label:before{
+        background-color: #FF6659;
+        border: 1px solid #D32F2F;
+    }
+}

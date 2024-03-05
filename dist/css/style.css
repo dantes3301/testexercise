@@ -80,7 +80,9 @@ main {
 
 .btn-red {
   display: block;
-  width: 82px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   background-color: #D32F2F;
   color: #fff;
   max-height: 72px;
@@ -89,22 +91,23 @@ main {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .btn-red:hover {
-  background-color: #FBCE51;
-  color: #1F1F1F;
+  opacity: 0.9;
 }
 
 .btn-transparent {
   display: block;
-  width: 82px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   color: #707070;
   border: 1px solid #707070;
   max-height: 72px;
@@ -118,11 +121,20 @@ main {
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .btn-transparent:hover {
-  background-color: #1F1F1F;
-  color: #fff;
+  opacity: 0.9;
+}
+
+.btn-gray {
+  color: #8D8D8D;
+  cursor: pointer;
+}
+
+.btn-gray:hover {
+  opacity: 0.9;
 }
 
 .tests__menu {
@@ -162,6 +174,36 @@ main {
 .tests__menu-options li {
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-left: 8px;
+  padding-left: 25px;
+  margin-right: 8px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.tests__menu-options li::before {
+  content: " ";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #34515E;
+  border-radius: 50%;
+  left: 7px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.tests__menu-options li.active {
+  color: #fff;
+  background-color: #D32F2F;
+}
+
+.tests__menu-options li.active::before {
+  background-color: #fff;
 }
 
 .tests__menu-options ul {
@@ -169,14 +211,15 @@ main {
           margin-block-start: 0px;
   -webkit-margin-after: 0px;
           margin-block-end: 0px;
-  -webkit-padding-start: 25px;
-          padding-inline-start: 25px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
   opacity: 0;
   -webkit-transform: translate(-200%);
       -ms-transform: translate(-200%);
           transform: translate(-200%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  list-style-type: none;
 }
 
 .tests__menu.active span {
@@ -240,6 +283,24 @@ main {
   transition: all 0.5s;
 }
 
+.checkbox-container label {
+  position: relative;
+}
+
+.checkbox-container label::before {
+  position: absolute;
+  content: " ";
+  width: 13px;
+  height: 13px;
+  border-radius: 50px;
+  border: 1px solid #afafaf;
+}
+
+.checkbox-container input:checked + label:before {
+  background-color: #FF6659;
+  border: 1px solid #D32F2F;
+}
+
 .tests__frame {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,7 +316,7 @@ main {
   width: 100%;
 }
 
-.tests__test {
+.tests__text {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -271,14 +332,14 @@ main {
           align-items: center;
 }
 
-.tests__test p {
+.tests__text p {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   color: #34515E;
 }
 
-.tests__test.disabled {
+.tests__text.disabled {
   display: none;
 }
 
@@ -323,4 +384,62 @@ main {
 
 .btn-container :first-child {
   margin: 0 20px 0 0;
+}
+
+.tests__test {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(100%);
+      -ms-transform: translate(100%);
+          transform: translate(100%);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.tests__test.active {
+  opacity: 1;
+  -webkit-transform: translate(0%);
+      -ms-transform: translate(0%);
+          transform: translate(0%);
+}
+
+.tests__test-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 15px 14px 15px;
+  font-size: 12px;
+  color: #8D8D8D;
+  border-bottom: 1px solid #8D8D8D;
+}
+
+.tests__test-head-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tests__test-head-menu div:not(:last-child) {
+  position: relative;
+  margin-right: 20px;
+}
+
+.tests__test-head-menu div:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  position: absolute;
+  background-color: #8D8D8D;
+  right: -10px;
+  top: 3px;
+}
+
+.tests__test-head-title p {
+  font-size: 16px;
+  color: #263238;
+  font-weight: 700;
 }
