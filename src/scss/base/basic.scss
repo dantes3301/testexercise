@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+  
+  body,
+  html {
+    height: 100%;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    line-height: 22px;
+    color: #263238;
+    background-color: #DFDFDF;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1 1 auto;
+    padding: 0 0 44px  0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
