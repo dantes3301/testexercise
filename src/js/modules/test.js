@@ -1,21 +1,3 @@
-// const QUESTIONS = [
-//     {
-//         question: 'сколько чего то там?',
-//         abswer: 'sfd32-4321',
-//         variebles: [
-//             {
-//                 id: 'sfd32-4321',
-//                 label: 'ответ 1'
-//             },
-//             {
-//                 id: 'sfsd2-4321',
-//                 label: 'ответ 2'
-//             }
-//         ]
-//     },
-// ]
-
-
 export function test (){
     const btnClearQuests = document.querySelector('.clear-quests')
     const intupQuests = document.querySelectorAll('input')
@@ -58,23 +40,18 @@ export function test (){
             document.querySelector('.start').onclick = ()=>{
                 optionNum = i
                 arr[optionNum] = true
-                console.log(arr);
                 fremeTestStart.classList.remove('active')
                 fremeTest.classList.add('active')
                 localStorage.setItem(optionNum, optionNum);
-
-                
-                // console.log(typeof(+g));
                 storegeOptionNum = localStorage.getItem(optionNum)
             if (+storegeOptionNum === optionNum) {
-                storegeAnswer = localStorage.getItem(textUserAnswers)
-                console.log(storegeAnswer);
+                storegeAnswer = localStorage.getItem('testName')
                 fremeTestStart.classList.remove('active')
                 document.querySelector('.tests__answers').classList.add('active')
                 document.querySelector('.tests__test').classList.remove('active')
                 for (let i = 0; i < document.querySelectorAll('.answer-user').length; i++){
-                
-                    document.querySelectorAll('.answer-user')[i].innerHTML = textUserAnswers[i]
+
+                    document.querySelectorAll('.answer-user')[i].innerHTML = textUserAnswers[i] || storegeAnswer.split(',')[i] || 'Не ответели'
                 }
             }
             }
@@ -127,11 +104,11 @@ export function test (){
         document.querySelectorAll('input').forEach(elem =>{
             if (elem.checked === true){
                 num = arrTwo.length
-                console.log(num,arrTwo.length);
                 document.querySelector('.answer-number').innerHTML = num
             }
         })
-        localStorage.setItem(textUserAnswers,textUserAnswers)
+
+        localStorage.setItem('testName',textUserAnswers)
 
     }
     document.querySelector('.answers').onclick = testAnsers
