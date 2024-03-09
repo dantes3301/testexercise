@@ -8,7 +8,7 @@
             </div>
             <div class="tests__test-start">
                 <div class="test-start__title">
-                    <p>Опесание</p>
+                    <p>Описание</p>
                 </div>
                 <div class="test-start-text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consequatur itaque facilis aliquam sunt neque, blanditiis vel, voluptas deserunt fuga amet impedit sed magni laboriosam provident labore suscipit aspernatur? Ratione?</p>
@@ -24,20 +24,20 @@
             </div>
             <div class="tests__test active">
                 <div class="tests__test-head">
-                    <div class="btn-gray">
+                    <div class="btn-gray cancel">
                         Выход
                     </div>
                     <div class="tests__test-head-title">
                         <p>Test's name</p>
                     </div>
                     <div class="tests__test-head-menu">
-                        <div class="btn-gray">
+                        <div class="btn-gray clear-quests">
                             Сбросить ответы
                         </div>
                         <div class="tests__test-head-menu-counter">
-                            2/5
+                            0/5
                         </div>
-                        <div class="tests__test-head-menu-timer">
+                        <div class="countdown">
                             00:00:00
                         </div>
                     </div>
@@ -46,15 +46,213 @@
                     <div class="test-questions__title">
                         <p>1.Вопрос </p>
                     </div>
-                    <div class="test-questions__options">
+                    <div class="test-questions__options" value="false">
                         <div class="checkbox-container">
-                            <input id='check-1' type="radio">
-                            <label for="check-1">@@option</label>
+                            <input id='check-1' type="radio" name="quest-1">
+                            <label for="check-1">Вариант А</label>
                         </div>
                         <div class="checkbox-container">
-                            <input id='check-2' type="radio">
-                            <label  for="check-2">@@option</label>
+                            <input id='check-2' type="radio" name="quest-1">
+                            <label for="check-2">Вариант Б</label>
                         </div>
+                        <div class="checkbox-container">
+                            <input id='check-3' type="radio" name="quest-1">
+                            <label for="check-3">Вариант В</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-4' type="radio" name="quest-1">
+                            <label for="check-4">Вариант Г</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-5' type="radio" name="quest-1">
+                            <label for="check-5">Вариант Д</label>
+                        </div>
+                    </div>
+                    <div class="test-questions__title">
+                        <p>2.Вопрос </p>
+                    </div>
+                    <div class="test-questions__options" value="false">
+                        <div class="checkbox-container">
+                            <input id='check-6' type="radio" name="quest-2">
+                            <label for="check-6">Вариант А</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-7' type="radio" name="quest-2">
+                            <label for="check-7">Вариант Б</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-8' type="radio" name="quest-2">
+                            <label for="check-8">Вариант В</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-9' type="radio" name="quest-2">
+                            <label for="check-9">Вариант Г</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-10' type="radio" name="quest-2">
+                            <label for="check-10">Вариант Д</label>
+                        </div>
+                    </div>
+                    <div class="test-questions__title">
+                        <p>3.Вопрос </p>
+                    </div>
+                    <div class="test-questions__options" value="false">
+                        <div class="checkbox-container">
+                            <input id='check-11' type="radio" name="quest-3">
+                            <label for="check-11">Вариант А</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-12' type="radio" name="quest-3">
+                            <label for="check-12">Вариант Б</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-13' type="radio" name="quest-3">
+                            <label for="check-13">Вариант В</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-14' type="radio" name="quest-3">
+                            <label for="check-14">Вариант Г</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-15' type="radio" name="quest-3">
+                            <label for="check-15">Вариант Д</label>
+                        </div>
+                    </div>
+                    <div class="test-questions__title">
+                        <p>4.Вопрос </p>
+                    </div>
+                    <div class="test-questions__options" value="false">
+                        <div class="checkbox-container">
+                            <input id='check-16' type="radio" name="quest-4">
+                            <label for="check-16">Вариант А</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-17' type="radio" name="quest-4">
+                            <label for="check-17">Вариант Б</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-18' type="radio" name="quest-4">
+                            <label for="check-18">Вариант В</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-19' type="radio" name="quest-4">
+                            <label for="check-19">Вариант Г</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-20' type="radio" name="quest-4">
+                            <label for="check-20">Вариант Д</label>
+                        </div>
+                    </div>
+                    <div class="test-questions__title">
+                        <p>5.Вопрос </p>
+                    </div>
+                    <div class="test-questions__options" value="false">
+                        <div class="checkbox-container">
+                            <input id='check-21' type="radio" name="quest-5">
+                            <label for="check-21">Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-22' type="radio" name="quest-5">
+                            <label for="check-22">Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id='check-23' type="radio" name="quest-5">
+                            <label for="check-23">Lorem ipsum dolor sit amet consectetur adipisicing elit.</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <div class="btn-border-red answers">
+                        Завершить
+                    </div>
+                </div>
+            </div>
+            <div class="tests__answers">
+                <div class="tests__test-head">
+                    <div class="btn-gray cancel">
+                        Выход
+                    </div>
+                    <div class="tests__test-head-title">
+                        <p>Test's name</p>
+                    </div>
+                    <div class="tests__test-head-menu">
+                        <div class="btn-gray clear-quests">
+                            Сбросить ответы
+                        </div>
+                        <div class="tests__test-head-menu-counter">
+                            0/5
+                        </div>
+                        <div class="countdown">
+                            00:00:00
+                        </div>
+                    </div>
+                </div>
+                <div class="tests__answers-container">
+                    <div class="tests__answer-title">
+                        <p>Тест завершён</p>
+                        <p>Вы ответили на <span class="answer-number">0</span> из 5 вопросов</p>
+                    </div>
+                    <div class="test__answers-text">
+                        <p>Ваши ответы</p>
+                    </div>
+                    <div class="tests__answer">
+                        <div class="test-questions__title">
+                            <p>1.Вопрос </p>
+                        </div>
+                        <div class="tests__answer-correct">
+                            <p>Правильный ответ: <span class="answer-correct">Вариант Б</span></p>
+                        </div>
+                        <div class="tests__answer-user">
+                            <p>Вы ответили: <span class="answer-user">Не ответели</span></p>
+                        </div>
+                    </div>
+                    <div class="tests__answer">
+                        <div class="test-questions__title">
+                            <p>2.Вопрос </p>
+                        </div>
+                        <div class="tests__answer-correct">
+                            <p>Правильный ответ: <span class="answer-correct">Вариант Б</span></p>
+                        </div>
+                        <div class="tests__answer-user">
+                            <p>Вы ответили: <span class="answer-user">Не ответели</span></p>
+                        </div>
+                    </div>
+                    <div class="tests__answer">
+                        <div class="test-questions__title">
+                            <p>3.Вопрос </p>
+                        </div>
+                        <div class="tests__answer-correct">
+                            <p>Правильный ответ: <span class="answer-correct">Вариант Б</span></p>
+                        </div>
+                        <div class="tests__answer-user">
+                            <p>Вы ответили: <span class="answer-user">Не ответели</span></p>
+                        </div>
+                    </div>
+                    <div class="tests__answer">
+                        <div class="test-questions__title">
+                            <p>4.Вопрос </p>
+                        </div>
+                        <div class="tests__answer-correct">
+                            <p>Правильный ответ: <span class="answer-correct">Вариант Б</span></p>
+                        </div>
+                        <div class="tests__answer-user">
+                            <p>Вы ответили: <span class="answer-user">Не ответели</span></p>
+                        </div>
+                    </div>
+                    <div class="tests__answer">
+                        <div class="test-questions__title">
+                            <p>5.Вопрос </p>
+                        </div>
+                        <div class="tests__answer-correct">
+                            <p>Правильный ответ: <span class="answer-correct">Вариант Б</span></p>
+                        </div>
+                        <div class="tests__answer-user">
+                            <p>Вы ответили: <span class="answer-user">Не ответели</span></p>
+                        </div>
+                    </div>
+                    <div class="test__answers-btn-container">
+                        <div class="btn-border-red clear">Пройти еще раз</div>
                     </div>
                 </div>
             </div>

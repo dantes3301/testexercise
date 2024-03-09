@@ -1,6 +1,8 @@
 .checkbox-container{
     label{
         position: relative;
+        padding-left: 12px;
+        cursor: pointer;
         &::before{
             position: absolute;
             content: ' ';
@@ -8,10 +10,40 @@
             height: 13px;
             border-radius: 50px;
             border: 1px solid #afafaf;
+            transform: translate(-150%, 25%);
         }
     }
     input:checked + label:before{
         background-color: #FF6659;
         border: 1px solid #D32F2F;
+    }
+    input{
+        opacity: 0;
+        visibility: hidden;
+
+    }
+}
+.test-questions__options{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 36px;
+    background-color: #EFEFEF;
+    margin: 12px 0 12px 0;
+    font-size: 14px;
+    &:last-child{
+        flex-direction: column;
+        font-size: 13px;
+        & div:not(:last-child){
+            margin: 0 0 20px 0;
+            
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .test-questions__options{
+        flex-direction: column;
+        div{
+            margin: 6px 0;
+        }
     }
 }
